@@ -1,9 +1,15 @@
 using UnityEngine;
+using Chapter.Singleton;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    private int _remainingEnemies = 2;
+    private int _remainingEnemies = 0;
     private bool _gameOver = false;
+
+    public void AddTotalEnemy()
+    {
+        _remainingEnemies++;
+    }
 
     public void EnemyDefeated()
     {

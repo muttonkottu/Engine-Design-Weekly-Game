@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class BigZombie : Enemy
 {
-    [SerializeField] private Transform player;
-
+    private bool _canMove = false;
+    public override void Attack()
+    {
+        _canMove = true;
+    }
+    
     public override void TakeDamage(float damage)
     {
-        health -= (damage / 2);
-        if (health <= 0)
-        {
-            gameManager.EnemyDefeated();
-            Destroy(gameObject);
-        }
+        base.TakeDamage(damage/2);
     }
     
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, movementSpeed * Time.deltaTime);
+        if (!playerTransform || _canMove == false) return;
+        transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, movementSpeed * Time.deltaTime);
     }
 }

@@ -1,20 +1,26 @@
 using System;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
-    // inherited classes can access these
     [SerializeField] protected float movementSpeed;
     [SerializeField] protected float health;
-    [SerializeField] protected GameManager gameManager;
+    protected Transform playerTransform;
 
-    // inherited classes can call this
+    public virtual void Init(Transform player)
+    {
+        playerTransform = player;
+        GameManager.Instance.AddTotalEnemy();
+    }
+
+    public abstract void Attack();
+
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            gameManager.EnemyDefeated();
+            GameManager.Instance.EnemyDefeated();
             Destroy(gameObject);
         }
     }
@@ -23,7 +29,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gameManager.TouchPlayer();
+            GameManager.Instance.TouchPlayer();
         }
     }
 }
