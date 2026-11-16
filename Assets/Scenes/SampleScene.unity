@@ -966,7 +966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1271136264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,8 +981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Zombie
   movementSpeed: 5
   health: 3
-  gameManager: {fileID: 1524233663}
-  player: {fileID: 1224052882}
 --- !u!65 &1271136265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1095,7 +1093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1277199738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,8 +1108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BigZombie
   movementSpeed: 3
   health: 5
-  gameManager: {fileID: 1524233663}
-  player: {fileID: 1224052882}
 --- !u!65 &1277199739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1221,7 +1217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1524233663
 MonoBehaviour:
   m_ObjectHideFlags: 0
