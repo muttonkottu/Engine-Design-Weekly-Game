@@ -24,6 +24,25 @@ public class BulletManager : MonoBehaviour
     private void OnShootPressed(InputAction.CallbackContext context)
     {
         Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
+        Shoot();
     }
 
     private void Shoot()
